@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>String Conversion (Lower To Upper)</title>
+  <meta charset='utf-8' />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+</head>
+<body style="background-color:green;text-align: center;" >
+ <script src="https://unpkg.com/vue@2.5.10/dist/vue.min.js"></script>
+  <div id="abc">
+  	<label style="font-family:Arial;">Enter String</label></br>
+   <input type="text" v-model="message" />
+   <p>String will convert into uppercase side by side when you enter</p>
+   <h4>{{ message | uppercase }}</h4>
+   
+   
+   
+</div>
+<script>
+	Vue.filter('uppercase', function (value) {
+   return value.toUpperCase()
+})
+
+new Vue({
+  el: '#abc',
+  data: {
+    message: ' '
+   }
+})
+</script> 
+</body>
+</html>
